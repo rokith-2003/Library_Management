@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <h1 style="color:#00ffe5;">LIBRARY MANAGEMENT</h1>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="#header">BOOKS</a></li>
+                <li><a href="#borrow">BORROW</a></li>
+                <li><a href="#about">CONTACT</a></li>
+            </ul>
+        </div>
+        <h1>WELCOME TO THE <pre style="color:#00ffe5;"> ONLINE LIBRARY!</pre></h1>
+        <h4>EXPLORE AND BORROW BOOKS <br><br><pre style="margin: 8vh 0px 0px -35vh;">THROUGH ONLINE!!</pre></h4>
+    </div>
+    <main>
+        <section id="header">
+            <div class="items-controller">
+                <h5>Show</h5>
+                <select title="Show" id="itemperpage">
+                    <option value="04">4</option>
+                    <option value="06">6</option>
+                    <option value="08">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                </select>
+                <h5>Per Page</h5>
+        </section>  
+    <section id="field">
+        <div class="filters">
+            <input type="text" id="subject-filter" placeholder="Book No">
+            <input type="text" id="title-filter" placeholder="Title">
+            <input type="text" id="author-filter" placeholder="Author">
+            <input type="text" id="publish-date-filter" placeholder="Publish Date">
+            <button onclick="filterBooks()">Filter</button>
+        </div>
+        <table id="books-table">
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <th>Book No</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publish Date</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>01</td>
+                <td>Death of s City</td>
+                <td>Amrita Pritam</td>
+                <td>2003-4-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>02</td>
+                <td>Pinjar</td>
+                <td>Amrita Pritam</td>
+                <td>1987-4-1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>03</td>
+                <td>Oliver Twist</td>
+                <td>Charles Darwin</td>
+                <td>2004-2-6</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>04</td>
+                <td>A Woman's Life</td>
+                <td>Guy de Maupassant</td>
+                <td>1892-12-16</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>05</td>
+                <td>War and Peace</td>
+                <td>Leo Tolstoy</td>
+                <td>2018-7-19</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>06</td>
+                <td>Divine Comedy</td>
+                <td>Dante</td>
+                <td>2006-4-1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>07</td>
+                <td>Faust</td>
+                <td>Goethe</td>
+                <td>2003-2-1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>08</td>
+                <td>Das Capital</td>
+                <td>karl Marx</td>
+                <td>1972-4-15</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>09</td>
+                <td>Broken Wings</td>
+                <td>Sarojini Naidu</td>
+                <td>1892-12-1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>10</td>
+                <td>Wings of Fire</td>
+                <td>Dr. A.P.J Abdul Kalam</td>
+                <td>2011-9-22</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>11</td>
+                <td>Pinjar</td>
+                <td>Amrita Pritam</td>
+                <td>1922-9-18</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>12</td>
+                <td>Oliver Twist</td>
+                <td>Charles Darwin</td>
+                <td>1999-12-6</td>
+            </tr>
+        </table>
+            <div class="bottom-field">
+                <ul class="pagination">
+                    <li class="prev"><a href="#header" id="prev">&#139;</a></li>
+                    <li class="list"><a href="#header">01</a></li>
+                    <li class="list"><a href="#header">02</a></li>
+                    <li class="list"><a href="#header">03</a></li>
+                    <li class="next"><a href="#header" id="next">&#155;</a></li>
+                </ul>
+            </div>
+            </section>
+    </main>
+    <div id="borrow">
+        <div class="details">
+            <h1>FILL THE <pre style="color:#00ffe5; margin-left:10px;">DETAILS!!</pre></h1>
+            <form action="borrowbook" method="post" >
+                <lable style="margin-top:30px;">ID No</lable>
+                <input type="text" name="id" placeholder="Id" required=""/>
+                <lable>Username</lable>
+                <input type="text" name="name" placeholder="Username" required=""/>
+                <lable>Book Title</lable>
+                <input type="text" name="title" placeholder="Title"/>
+                <lable>Author</lable>
+                <input type="text" name="author" placeholder="Author"/>
+                <lable>Date</lable>
+                <input type="date" name="dat" placeholder="Date"/>
+                <button type="submit">Borrow</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer id="about">
+        <div class="container">
+            <h1>CONTACT US</h1>
+            <div class="contact-info">
+              <h3>Contact Information</h3>
+              <p>Email: <a href="mailto:support@librarymanagementsystem.com">support@librarymanagementsystem.com</a></p>
+              <p>Phone: +91 9581526378</p>
+              <p>Address: 12,Anna Nagar,Chennai</p>
+            </div>
+            <div class="contact-form">
+              <h3>Send us a Message</h3>
+              <form action="" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <input type="submit" value="Send Message">
+              </form>
+            </div>
+          </div>
+    </footer>
+    <script src="home.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

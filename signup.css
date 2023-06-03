@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+  height:100vh;
+  width:100%;
+  background-image:url(bg.jpeg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form{
+  margin: 50px 0px 0px -53vh;
+  width: 25rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0px 8px 25px 0px rgb(46, 45, 45);
+  border-radius: 30px;
+}
+h1{
+  margin: -80vh 0px 0px 0px;
+  color:rgba(255, 255, 255, 0.849);
+}
+h5{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  letter-spacing: 1px; 
+  color:rgba(255, 255, 255);
+  font-size: 15px;
+  opacity: 0.7;
+}
+lable{
+  margin-left: 10%;
+  color:rgb(255, 255, 255);
+}
+input{
+  width:80%;
+  margin: 10px auto; 
+  margin-bottom: 30px;
+  padding:8px;
+  outline: none;
+  background: transparent;
+  border:none;
+  border-bottom:1px solid white;
+  color:white;
+  opacity: 0.9;
+} 
+ button{
+   width: 30%;
+   margin: 10px auto;
+   padding: 5px;
+   border-radius:30px;
+   border:none;
+   color:rgb(255, 255, 255);;
+   background: rgba(255, 255, 255,0.4);
+   letter-spacing: 0.5px;
+ }
+ a{
+   text-decoration: none;
+   color:rgb(255, 255, 255);
+ } 
+ .s{
+   margin:0px 0px 0px 25%;
+ } 
+ .l{
+   margin: -20px 0% 0% 67%;
+   color:rgb(44, 40, 40);
+ }
